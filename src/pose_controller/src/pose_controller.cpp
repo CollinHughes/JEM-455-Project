@@ -17,14 +17,14 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "pose_controller"); 
     ros::NodeHandle n; 
 
-	ros::Publisher pose_setup = n.advertise<geometry_msgs::Vector3>("pose_controller", 1);
+	//ros::Publisher pose_setup = n.advertise<geometry_msgs::Vector3>("pose_controller", 1);
 
     ros::Subscriber pose_in = n.subscribe("/pose_controller", 1, pose_control_fun);
 
 
     
     
-    //ros::Rate rate(50);
+   	ros::Rate rate(50);
 	pose_desired.x = 0;
 	pose_desired.y = 0;
 	pose_desired.z = 0;
@@ -36,7 +36,7 @@ int main(int argc, char **argv) {
     	
     	//local_velocities.publish(velocities);
     	ros::spinOnce();
-    	//rate.sleep();
+    	rate.sleep();
     	if (new_data = 1) {
     		new_data = 0;
     	}
