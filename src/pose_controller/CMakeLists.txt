@@ -50,8 +50,8 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
 #add_message_files(
 #   FILES
-#    FILES
-#    /pose_est/msg/pose_est_msg.msg
+#   FILES
+#   pose_est_msg.msg
 #   Message1.msg
 #   Message2.msg
 #)

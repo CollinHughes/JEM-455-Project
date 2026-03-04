@@ -1,5 +1,5 @@
 <launch>
-	<arg name="xd" default="1.0" />
+	<arg name="xd" default="10.0" />
 	<arg name="yd" default="0.0" />
 	<arg name="td" default="0.0" />
 	<node name="master" pkg="master" type="master" output="screen" />

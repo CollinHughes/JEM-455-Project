@@ -5,7 +5,9 @@
 #include <geometry_msgs/Point.h>
 #include <pose_est/pose_est_msg.h>
 
+
 #define ASCII_OFFSET (48)
+#define PI (3.14159265359)
 
 geometry_msgs::Vector3 pose_desired;
 geometry_msgs::Point pose_real;
@@ -50,7 +52,7 @@ int main(int argc, char **argv) {
     	ros::Subscriber pose_in = n.subscribe("/pose_controller", 1, pose_control_fun);
     	ros::Publisher local_velocities = n.advertise<geometry_msgs::Vector3>("local_velocities", 1);
 	ros::Publisher pose_out = n.advertise<geometry_msgs::Vector3>("pose_controller", 1);
-	ros::Subscriber position_in = n.subscribe("/pose_msg", 1, pose_in_fun);
+	ros::Subscriber position_in = n.subscribe("/pose_est", 1, pose_in_fun);
 	ros::Subscriber stopGo_in = n.subscribe("/startStop", 1, stopGo_fun);
     	pose_out.publish(pose_desired);
     
@@ -64,16 +66,23 @@ int main(int argc, char **argv) {
     while (ros::ok()) // The ros::ok() function returns true as long as ROS is running
     {
 	ros::spinOnce();
-    	if ((new_data == 1) && (stopGo.data == 1)) {
+    	if (/*(new_data == 1) &&*/ (stopGo.data == 1)) {
     		new_data = 0;
     		// Calculate errors:
     		rho = sqrt((pose_desired.x-pose_real.x)*(pose_desired.x-pose_real.x) + (pose_desired.y-pose_real.y)*(pose_desired.y-pose_real.y));
     		alpha = atan2((pose_desired.y-pose_real.y), (pose_desired.x-pose_real.x)) - pose_real.z;
+    		if (alpha > PI) alpha -= 2*PI;
+    		if (alpha <= -PI) alpha += 2*PI;  
     		eta = pose_desired.z - pose_real.z;
-    		if (rho < 0.2) {
+    		if (eta > PI) eta -= 2*PI;
+    		if (eta <= -PI) eta += 2*PI; 
+    		if (fabs(rho) < 0.5) {
     			rho = 0;
     			alpha = 0;
+    			if (fabs(eta) < .2) eta = 0;
+    			eta /= 2;
     		}
+    		
     		goal_vel.x = rho*k_dis;
     		goal_vel.z = alpha*k_dir + eta*k_ori;
     		if (goal_vel.x > 4) goal_vel.x = 4;
