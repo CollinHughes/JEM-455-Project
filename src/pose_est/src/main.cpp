@@ -1,18 +1,15 @@
-#include <ros/ros.h>  // This .h file must always be included in all ROS code
-#include <std_msgs/Float64.h> // This is type std_msgs/Float64 which is a standard 64 bit floating point number
+#include <ros/ros.h>  
+#include <std_msgs/Float64.h> 
 #include <std_msgs/UInt16.h>
 #include <geometry_msgs/Vector3.h>
 #include <pose_est/pose_est_msg.h>
 
-// Global variables
-#define d (24.0) //50 cm apart, distance between wheels 24.28875
-#define r (3.25) // Radius of 3 cm 3.33
+
+#define d (24.0) 
+#define r (3.25) 
 #define DELAY (30.0)
 #define PI (3.14159265359)
-//std_msgs::Float64 right_wheel_ang_vel;
-//std_msgs::Float64 left_wheel_ang_vel;
-pose_est::pose_est_msg pose_msg; // Needed for the project for some reason
-
+pose_est::pose_est_msg pose_msg; // Testing the custom message types
 std_msgs::Float64 right_enc_value;
 std_msgs::Float64 left_enc_value;
 std_msgs::Float64 last_left_enc_value;
@@ -44,78 +41,66 @@ void left_enc(const std_msgs::Float64& l_enc) {
 }
 
 int main(int argc, char **argv) {
-	
-    ros::init(argc, argv, "pose_est"); // Node name
-    ros::NodeHandle n; 
-
-    //ros::Publisher left_wheel_v_pub = n.advertise<std_msgs::Float64>("left_wheel_ang_vel", 1);
-    //ros::Publisher right_wheel_v_pub = n.advertise<std_msgs::Float64>("right_wheel_ang_vel", 1);
+	ros::init(argc, argv, "pose_est");
+	ros::NodeHandle n; 
+	ros::Publisher pos_values_pub = n.advertise<pose_est::pose_est_msg>("pose_est", 1);
+	ros::Subscriber right_encoder = n.subscribe("/right_wheel_enc", 1, right_enc);
+	ros::Subscriber left_encoder = n.subscribe("/left_wheel_enc", 1, left_enc);
     
-    //ros::Subscriber velocity_in = n.subscribe("/local_velocities", 1, local_velocity); // Subscribe to velocity data
+	// Initialization
+	pose_msg.id = 0;
+	pose_msg.name = "Silly Creature";
+	pose_msg.point.x = 0;
+	pose_msg.point.y = 0;
+	pose_msg.point.z = 0;
+	left_enc_value.data = 0;
+	right_enc_value.data = 0;
+	last_left_enc_value.data = -1;
+	last_right_enc_value.data = -1;
+	t_vel.data = 0;
+	x_vel.data = 0;
+	y_vel.data = 0;
+	q_right.data = 0;
+	q_left.data = 0;
+	new_data_flag_right = 0;
+	new_data_flag_left = 0;
+	ros::Rate rate((int)DELAY); // 1/s
     
-    ros::Publisher pos_values_pub = n.advertise<pose_est::pose_est_msg>("pose_est", 1);
-
-    ros::Subscriber right_encoder = n.subscribe("/right_wheel_enc", 1, right_enc);
-    ros::Subscriber left_encoder = n.subscribe("/left_wheel_enc", 1, left_enc);
-    
-    //////////////////////////////////////////////
-    pose_msg.id = 0;
-    pose_msg.name = "Silly Creature";
-    
-    pose_msg.point.x = 0;
-    pose_msg.point.y = 0;
-    pose_msg.point.z = 0;
-    left_enc_value.data = 0;
-    right_enc_value.data = 0;
-    last_left_enc_value.data = -1;
-    last_right_enc_value.data = -1;
-    t_vel.data = 0;
-    x_vel.data = 0;
-    y_vel.data = 0;
-    q_right.data = 0;
-    q_left.data = 0;
-    new_data_flag_right = 0;
-    new_data_flag_left = 0;
-    ros::Rate rate((int)DELAY); // 1/s
-    
-    while (((int)left_enc_value.data != (int)last_left_enc_value.data) & ((int)right_enc_value.data != (int)last_right_enc_value.data)){
-    	ros::spinOnce();
-    	rate.sleep();
-    }
+    	// Flushing out the system, probably couldve used a floor funciton
+	while (((int)left_enc_value.data != (int)last_left_enc_value.data) & ((int)right_enc_value.data != (int)last_right_enc_value.data)) {
+		ros::spinOnce();
+		rate.sleep();
+	}
 	
 	
 	now = ros_time.now();
-    while (ros::ok()) // The ros::ok() function returns true as long as ROS is running
-    {
-    	ros::spinOnce();
-    	
-    	if ((new_data_flag_left == 1) & (new_data_flag_right == 1)) {
-	    	last = now;
-	    	now = ros_time.now();
-	    	dt = (now - last).toSec();
-	    	
-	    	// Getting the wheel velocities
-	    	q_left.data = r*(left_enc_value.data - last_left_enc_value.data)/dt; // cm/s
-	    	q_right.data = r*(right_enc_value.data - last_right_enc_value.data)/dt; // cm/s
-	    	
-	    	// Kinematics ----
-	    	t_vel.data = (1/d)*(q_right.data - q_left.data);  // rad/s
-	    	pose_msg.point.z += t_vel.data*dt; // rad (0.1809)
-	    	if (pose_msg.point.z > PI) pose_msg.point.z -= 2*PI;
-	    	else if (pose_msg.point.z <= -PI) pose_msg.point.z += 2*PI;
-	    	x_vel.data = 0.5*cos(pose_msg.point.z)*(q_right.data + q_left.data); 
-	    	y_vel.data = 0.5*sin(pose_msg.point.z)*(q_right.data + q_left.data);
-	    	pose_msg.point.x += x_vel.data*dt; //(0.66)
-	    	pose_msg.point.y += y_vel.data*dt; // (0.66)
-	    	
+	while (ros::ok()) {
+		ros::spinOnce();
 
-	    	//left_wheel_v_pub.publish(q_left);
-	    	//right_wheel_v_pub.publish(q_right);
-	    	
-	    	pos_values_pub.publish(pose_msg);
-	    	//rate.sleep();
-	    	new_data_flag_left = 0;
-	    	new_data_flag_right = 0;
-    	}
-    }
+		if ((new_data_flag_left == 1) & (new_data_flag_right == 1)) {
+			// Get time difference
+		    	last = now;
+		    	now = ros_time.now();
+		    	dt = (now - last).toSec();
+		    	
+		    	// Getting the wheel velocities
+		    	q_left.data = r*(left_enc_value.data - last_left_enc_value.data)/dt; // cm/s
+		    	q_right.data = r*(right_enc_value.data - last_right_enc_value.data)/dt; // cm/s
+		    	
+		    	// Kinematics
+		    	t_vel.data = (1/d)*(q_right.data - q_left.data);  // rad/s
+		    	pose_msg.point.z += t_vel.data*dt; // rad 
+		    	if (pose_msg.point.z > PI) pose_msg.point.z -= 2*PI;
+		    	else if (pose_msg.point.z <= -PI) pose_msg.point.z += 2*PI;
+		    	x_vel.data = 0.5*cos(pose_msg.point.z)*(q_right.data + q_left.data); 
+		    	y_vel.data = 0.5*sin(pose_msg.point.z)*(q_right.data + q_left.data);
+		    	pose_msg.point.x += x_vel.data*dt; 
+		    	pose_msg.point.y += y_vel.data*dt; 
+		    	
+			// Publish data
+		    	pos_values_pub.publish(pose_msg);
+		    	new_data_flag_left = 0;
+		    	new_data_flag_right = 0;
+		}
+	}
 }
