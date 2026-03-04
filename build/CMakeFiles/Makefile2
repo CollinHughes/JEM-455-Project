@@ -66,8 +66,8 @@ all: magni_robot/magni_viz/all
 all: ros-keyboard-master/all
 all: master/all
 all: mobile_ik/all
-all: pose_controller/all
 all: pose_est/all
+all: pose_controller/all
 all: oled_display_node/all
 all: ubiquity_motor/all
 
@@ -87,8 +87,8 @@ preinstall: magni_robot/magni_viz/preinstall
 preinstall: ros-keyboard-master/preinstall
 preinstall: master/preinstall
 preinstall: mobile_ik/preinstall
-preinstall: pose_controller/preinstall
 preinstall: pose_est/preinstall
+preinstall: pose_controller/preinstall
 preinstall: oled_display_node/preinstall
 preinstall: ubiquity_motor/preinstall
 
@@ -113,8 +113,8 @@ clean: magni_robot/magni_viz/clean
 clean: ros-keyboard-master/clean
 clean: master/clean
 clean: mobile_ik/clean
-clean: pose_controller/clean
 clean: pose_est/clean
+clean: pose_controller/clean
 clean: oled_display_node/clean
 clean: ubiquity_motor/clean
 
@@ -1688,33 +1688,6 @@ mobile_ik/CMakeFiles/mobile_ik.dir/clean:
 .PHONY : mobile_ik/CMakeFiles/mobile_ik.dir/clean
 
 #=============================================================================
-# Target rules for target pose_controller/CMakeFiles/pose_controller.dir
-
-# All Build rule for target.
-pose_controller/CMakeFiles/pose_controller.dir/all:
-	$(MAKE) -f pose_controller/CMakeFiles/pose_controller.dir/build.make pose_controller/CMakeFiles/pose_controller.dir/depend
-	$(MAKE) -f pose_controller/CMakeFiles/pose_controller.dir/build.make pose_controller/CMakeFiles/pose_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=42,43 "Built target pose_controller"
-.PHONY : pose_controller/CMakeFiles/pose_controller.dir/all
-
-# Build rule for subdir invocation for target.
-pose_controller/CMakeFiles/pose_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/catkin_ws/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 pose_controller/CMakeFiles/pose_controller.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/catkin_ws/build/CMakeFiles 0
-.PHONY : pose_controller/CMakeFiles/pose_controller.dir/rule
-
-# Convenience name for target.
-pose_controller: pose_controller/CMakeFiles/pose_controller.dir/rule
-
-.PHONY : pose_controller
-
-# clean rule for target.
-pose_controller/CMakeFiles/pose_controller.dir/clean:
-	$(MAKE) -f pose_controller/CMakeFiles/pose_controller.dir/build.make pose_controller/CMakeFiles/pose_controller.dir/clean
-.PHONY : pose_controller/CMakeFiles/pose_controller.dir/clean
-
-#=============================================================================
 # Target rules for target pose_est/CMakeFiles/pose_est_genpy.dir
 
 # All Build rule for target.
@@ -2213,6 +2186,33 @@ pose_est_genlisp: pose_est/CMakeFiles/pose_est_genlisp.dir/rule
 pose_est/CMakeFiles/pose_est_genlisp.dir/clean:
 	$(MAKE) -f pose_est/CMakeFiles/pose_est_genlisp.dir/build.make pose_est/CMakeFiles/pose_est_genlisp.dir/clean
 .PHONY : pose_est/CMakeFiles/pose_est_genlisp.dir/clean
+
+#=============================================================================
+# Target rules for target pose_controller/CMakeFiles/pose_controller.dir
+
+# All Build rule for target.
+pose_controller/CMakeFiles/pose_controller.dir/all:
+	$(MAKE) -f pose_controller/CMakeFiles/pose_controller.dir/build.make pose_controller/CMakeFiles/pose_controller.dir/depend
+	$(MAKE) -f pose_controller/CMakeFiles/pose_controller.dir/build.make pose_controller/CMakeFiles/pose_controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=42,43 "Built target pose_controller"
+.PHONY : pose_controller/CMakeFiles/pose_controller.dir/all
+
+# Build rule for subdir invocation for target.
+pose_controller/CMakeFiles/pose_controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/catkin_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 pose_controller/CMakeFiles/pose_controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/catkin_ws/build/CMakeFiles 0
+.PHONY : pose_controller/CMakeFiles/pose_controller.dir/rule
+
+# Convenience name for target.
+pose_controller: pose_controller/CMakeFiles/pose_controller.dir/rule
+
+.PHONY : pose_controller
+
+# clean rule for target.
+pose_controller/CMakeFiles/pose_controller.dir/clean:
+	$(MAKE) -f pose_controller/CMakeFiles/pose_controller.dir/build.make pose_controller/CMakeFiles/pose_controller.dir/clean
+.PHONY : pose_controller/CMakeFiles/pose_controller.dir/clean
 
 #=============================================================================
 # Target rules for target oled_display_node/CMakeFiles/oled_display_node_generate_messages.dir

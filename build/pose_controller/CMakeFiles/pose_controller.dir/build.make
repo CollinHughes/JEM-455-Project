@@ -88,8 +88,8 @@ pose_controller_EXTERNAL_OBJECTS =
 /home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /opt/ros/noetic/lib/librosconsole_backend_interface.so
 /home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /usr/lib/arm-linux-gnueabihf/liblog4cxx.so
 /home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /usr/lib/arm-linux-gnueabihf/libboost_regex.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /opt/ros/noetic/lib/librostime.so
 /home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so.1.71.0
 /home/ubuntu/catkin_ws/devel/lib/pose_controller/pose_controller: /opt/ros/noetic/lib/libcpp_common.so

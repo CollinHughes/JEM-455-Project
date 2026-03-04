@@ -7,23 +7,18 @@
 
 // Global variables
 #define d (24.0) //50 cm apart
-//std_msgs::Float64 right_wheel_ang_vel;
-//std_msgs::Float64 left_wheel_ang_vel;
-
 std_msgs::Float64 q_left;
 std_msgs::Float64 q_right;
-
 geometry_msgs::Vector3 local_v;
-//q_counter.data = 0;
 int velocity_update = 0;
-
 std_msgs::Float64 left_wheel_velocity;
 std_msgs::Float64 right_wheel_velocity;
 
+
+
 void local_velocity(const geometry_msgs::Vector3& v)
 {
-    local_v = v; // Store the data from this topic into our global variable
-    //ROS_INFO("Key pressed has code: %d",message_in.code); /* This is how we do print statements in
+    local_v = v; 
     velocity_update = 1;
 }
 
@@ -43,13 +38,13 @@ int main(int argc, char **argv) {
     
     left_wheel_velocity.data = 0;
     right_wheel_velocity.data = 0;
-    ros::Rate rate(50);
+    ros::Rate rate(100);
 
 
     while (ros::ok()) // The ros::ok() function returns true as long as ROS is running
     {
-  	q_left.data = (local_v.x*0.63 - 0.288*(d/2)*local_v.z/3);
-  	q_right.data = (local_v.x*0.63 + 0.288*(d/2)*local_v.z/3);
+  	q_left.data = (local_v.x - (d/2)*local_v.z/3);
+  	q_right.data = (local_v.x + (d/2)*local_v.z/3);
         
         //local_v.x = 0;
         //local_v.z = 0;

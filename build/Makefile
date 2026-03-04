@@ -688,19 +688,6 @@ mobile_ik/fast:
 .PHONY : mobile_ik/fast
 
 #=============================================================================
-# Target rules for targets named pose_controller
-
-# Build rule for target.
-pose_controller: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pose_controller
-.PHONY : pose_controller
-
-# fast build rule for target.
-pose_controller/fast:
-	$(MAKE) -f pose_controller/CMakeFiles/pose_controller.dir/build.make pose_controller/CMakeFiles/pose_controller.dir/build
-.PHONY : pose_controller/fast
-
-#=============================================================================
 # Target rules for targets named pose_est_genpy
 
 # Build rule for target.
@@ -933,6 +920,19 @@ pose_est_genlisp: cmake_check_build_system
 pose_est_genlisp/fast:
 	$(MAKE) -f pose_est/CMakeFiles/pose_est_genlisp.dir/build.make pose_est/CMakeFiles/pose_est_genlisp.dir/build
 .PHONY : pose_est_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named pose_controller
+
+# Build rule for target.
+pose_controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_controller
+.PHONY : pose_controller
+
+# fast build rule for target.
+pose_controller/fast:
+	$(MAKE) -f pose_controller/CMakeFiles/pose_controller.dir/build.make pose_controller/CMakeFiles/pose_controller.dir/build
+.PHONY : pose_controller/fast
 
 #=============================================================================
 # Target rules for targets named oled_display_node_generate_messages
@@ -2001,7 +2001,6 @@ help:
 	@echo "... keyboard_genpy"
 	@echo "... master"
 	@echo "... mobile_ik"
-	@echo "... pose_controller"
 	@echo "... pose_est_genpy"
 	@echo "... pose_est_gennodejs"
 	@echo "... pose_est_generate_messages_py"
@@ -2020,6 +2019,7 @@ help:
 	@echo "... pose_est_generate_messages_lisp"
 	@echo "... pose_est_generate_messages"
 	@echo "... pose_est_genlisp"
+	@echo "... pose_controller"
 	@echo "... oled_display_node_generate_messages"
 	@echo "... oled_display_node_generate_messages_nodejs"
 	@echo "... _oled_display_node_generate_messages_check_deps_DisplayOutput"

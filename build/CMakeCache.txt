@@ -636,6 +636,9 @@ pose_controller_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/pose_controller
 //Value Computed by CMake
 pose_est_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/pose_est
 
+//The directory containing a CMake configuration file for pose_est.
+pose_est_DIR:PATH=/home/ubuntu/catkin_ws/devel/share/pose_est/cmake
+
 //Value Computed by CMake
 pose_est_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/pose_est
 

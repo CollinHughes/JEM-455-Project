@@ -1,6 +1,7 @@
 # Hashes of file build rules.
 97fca42cbe3eb7a93c4b27f0f1289d00 /home/ubuntu/catkin_ws/devel/include/keyboard/Key.h
 d8054df6c09ccef9b688a7e6ef99f5f9 /home/ubuntu/catkin_ws/devel/include/oled_display_node/DisplayOutput.h
+fa12aeee801bc75f4718864f8f2ecd05 /home/ubuntu/catkin_ws/devel/include/pose_controller/pose_est_msg.h
 fbbd6ce7b06fbc5909b7ae1df84ec8a7 /home/ubuntu/catkin_ws/devel/include/pose_est/pose_est_msg.h
 f6ebfc246cdcf59889b3c02526193c3a /home/ubuntu/catkin_ws/devel/include/ubiquity_motor/MotorState.h
 d5a4c36f5512db08168b81e3c361be96 /home/ubuntu/catkin_ws/devel/include/ubiquity_motor/PIDConfig.h
@@ -8,22 +9,28 @@ d5a4c36f5512db08168b81e3c361be96 /home/ubuntu/catkin_ws/devel/include/ubiquity_m
 cfc1f66b882935c54a2a0ebef9e7ae68 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/keyboard/msg/__init__.py
 e9882952dad6b1fcaf53947c381d8790 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/oled_display_node/msg/_DisplayOutput.py
 79139211b2887c4de1653c5e97d33dad /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/oled_display_node/msg/__init__.py
+ceef321380b7f1eb7348a6205957ee6f /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/pose_controller/msg/__init__.py
+925b307ba394b2583531f8d59ac708f5 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/pose_controller/msg/_pose_est_msg.py
 d61a99ccc7ff392e308540ab773053a1 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/pose_est/msg/__init__.py
 8cdfbc9d63877a2b00144b07fb4daf56 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/pose_est/msg/_pose_est_msg.py
 22bc6c5df677a82adf0280955957b47f /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/ubiquity_motor/msg/_MotorState.py
 83c74869026c1005e771e9011a6b053e /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/ubiquity_motor/msg/__init__.py
 a48968e76265ffd53458ca4df860b57f /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/keyboard/msg/Key.lisp
 4f593ac9350ffa1c23263ca87a28feae /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/oled_display_node/msg/DisplayOutput.lisp
+cb336b53ad2b3b4f1b12c5d80c1c5dd9 /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/pose_controller/msg/pose_est_msg.lisp
 146a4176e7906d705866feb91752e66c /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/pose_est/msg/pose_est_msg.lisp
 e6670ecb39cfc210fe8e71b87c2c9c8e /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/ubiquity_motor/msg/MotorState.lisp
 92ad31c11de5184e56b5e5fa7116fa50 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/keyboard/msg/Key.js
 5810da2a3235d80e47209541bbcbcb7f /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/oled_display_node/msg/DisplayOutput.js
+017ec87cb4227e31fef68bcc37115796 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/pose_controller/msg/pose_est_msg.js
 e7f2694f14c3155ba662881fe90de73a /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/pose_est/msg/pose_est_msg.js
 73afa67a4a9c5d0b14640e763e827e2c /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/ubiquity_motor/msg/MotorState.js
 41624757125f6d11faf3eb18a490791c /home/ubuntu/catkin_ws/devel/share/roseus/ros/keyboard/manifest.l
 a8fe3e4438c73d6d0b2870f0a8b99cbd /home/ubuntu/catkin_ws/devel/share/roseus/ros/keyboard/msg/Key.l
 fd1000d1543472ebf54651a716d08db9 /home/ubuntu/catkin_ws/devel/share/roseus/ros/oled_display_node/manifest.l
 00b8f809320803a2fd23fc90ea23a3ef /home/ubuntu/catkin_ws/devel/share/roseus/ros/oled_display_node/msg/DisplayOutput.l
+1a05f31c5273469f4d3d0f3f3e9c3f66 /home/ubuntu/catkin_ws/devel/share/roseus/ros/pose_controller/manifest.l
+7dd99686d07c3db851875d491bf3bdff /home/ubuntu/catkin_ws/devel/share/roseus/ros/pose_controller/msg/pose_est_msg.l
 cbb900ff3e6578a4a6d27a0e2bca4e92 /home/ubuntu/catkin_ws/devel/share/roseus/ros/pose_est/manifest.l
 8bf2ebea0532b9c1c4f6d6674ad76e25 /home/ubuntu/catkin_ws/devel/share/roseus/ros/pose_est/msg/pose_est_msg.l
 557e894375c1d2a024bf8137f97a6c0a /home/ubuntu/catkin_ws/devel/share/roseus/ros/ubiquity_motor/manifest.l
