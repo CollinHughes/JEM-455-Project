@@ -10,10 +10,11 @@
 geometry_msgs::Vector3 pose_desired;
 geometry_msgs::Point pose_real;
 geometry_msgs::Vector3 goal_vel;
+geometry_msgs::Vector3 error_data;
 int new_data = 0;
-double k_dis = 1.2;
+double k_dis = 0.6;
 double k_dir = 0.8;
-double k_ori = 0.5;
+double k_ori = 1.0;
 double rho = 0;
 double alpha = 0;
 double eta = 0;
@@ -49,6 +50,7 @@ int main(int argc, char **argv) {
     	ros::Subscriber pose_in = n.subscribe("/pose_controller", 1, pose_control_fun);
     	ros::Publisher local_velocities = n.advertise<geometry_msgs::Vector3>("local_velocities", 1);
 	ros::Publisher pose_out = n.advertise<geometry_msgs::Vector3>("pose_controller", 1);
+	ros::Publisher error_out = n.advertise<geometry_msgs::Vector3>("error", 1);
 	ros::Subscriber position_in = n.subscribe("/pose_est", 1, pose_in_fun);
 	ros::Subscriber stopGo_in = n.subscribe("/startStop", 1, stopGo_fun);
     	pose_out.publish(pose_desired);
@@ -70,32 +72,36 @@ int main(int argc, char **argv) {
     		eta = pose_desired.z - pose_real.z;
     		
     		// Wrap alpha and eta to -pi, pi
-    		if (alpha > PI) alpha -= 2*PI;
-    		if (alpha <= -PI) alpha += 2*PI;  
-    		if (eta > PI) eta -= 2*PI;
-    		if (eta <= -PI) eta += 2*PI; 
+    		alpha = atan2(sin(alpha), cos(alpha));
+		eta = atan2(sin(eta), cos(eta));
     		
     		// if our distance is within half a centimeter, stop
-    		if (rho < 0.5) {
+    		if (rho < 0.1) {
     			rho = 0.0;
     			alpha = 0.0;
     			// if the orientation is almost right, cut it
-    			if (fabs(eta) < .2) eta = 0.0;
-    			eta /= 2.0;
+    			if (fabs(eta) < .01) eta = 0.0;
+    		} else {
+    			eta = 0.0;
     		}
     		
     		// Set velocities with a proportional controller.
-    		goal_vel.x = rho*k_dis*cos(eta);
+    		goal_vel.x = rho*k_dis*cos(alpha);
     		goal_vel.z = alpha*k_dir + eta*k_ori;
     		
     		// Add cuttoffs if it is too high
-    		if (goal_vel.x > 4.0) goal_vel.x = 4.0;
-    		else if (goal_vel.y < -4.0) goal_vel.x = -4.0;
+    		if (goal_vel.x > 3.0) goal_vel.x = 3.0;
+    		else if (goal_vel.x < -3.0) goal_vel.x = -3.0;
     		
     		if (goal_vel.z > 1.0) goal_vel.z = 1.0;
     		else if (goal_vel.z < -1.0) goal_vel.z = -1.0;
     		
+    		error_data.x = rho;
+    		error_data.y = alpha;
+    		error_data.z = eta;
+    		
     		// Publish the velocities
+    		error_out.publish(error_data);
     		local_velocities.publish(goal_vel);
     	} else if (stopGo.data == 0) {
     		goal_vel.x = 0;

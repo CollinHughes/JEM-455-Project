@@ -1,7 +1,7 @@
 <launch>
-	<arg name="xd" default="10.0" />
-	<arg name="yd" default="0.0" />
-	<arg name="td" default="0.0" />
+	<arg name="xd" default="60.96" /> <!--60.96, 30.48, 1.571 -->
+	<arg name="yd" default="30.48" />
+	<arg name="td" default="-1.571" />
 	<node name="master" pkg="master" type="master" output="screen" />
 	<node name="keyboard" pkg="keyboard" type="keyboard" output="screen" />
 	<node name="rosserial_arduino" pkg="rosserial_arduino" type="serial_node.py" args="/dev/ttyACM0" output="screen" />
