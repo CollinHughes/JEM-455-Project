@@ -25,6 +25,7 @@ ros::Time last;
 double dt;
 int new_data_flag_left;
 int new_data_flag_right;
+int flush_counter;
 
 
 
@@ -67,9 +68,13 @@ int main(int argc, char **argv) {
 	ros::Rate rate((int)DELAY); // 1/s
     
     	// Flushing out the system, probably couldve used a floor funciton
-	while (((int)left_enc_value.data != (int)last_left_enc_value.data) & ((int)right_enc_value.data != (int)last_right_enc_value.data)) {
+	while (flush_counter <= 3) {
 		ros::spinOnce();
-		rate.sleep();
+		if ((new_data_flag_left == 1) & (new_data_flag_right == 1)) { 
+			flush_counter++;
+			new_data_flag_left = 0;
+		    	new_data_flag_right = 0;
+		}
 	}
 	
 	
@@ -90,8 +95,7 @@ int main(int argc, char **argv) {
 		    	// Kinematics
 		    	t_vel.data = (1/d)*(q_right.data - q_left.data);  // rad/s
 		    	pose_msg.point.z += t_vel.data*dt; // rad 
-		    	if (pose_msg.point.z > PI) pose_msg.point.z -= 2*PI;
-		    	else if (pose_msg.point.z <= -PI) pose_msg.point.z += 2*PI;
+		    	pose_msg.point.z = atan2(sin(pose_msg.point.z), cos(pose_msg.point.z));
 		    	x_vel.data = 0.5*cos(pose_msg.point.z)*(q_right.data + q_left.data); 
 		    	y_vel.data = 0.5*sin(pose_msg.point.z)*(q_right.data + q_left.data);
 		    	pose_msg.point.x += x_vel.data*dt; 

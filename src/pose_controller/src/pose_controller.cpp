@@ -13,8 +13,8 @@ geometry_msgs::Vector3 goal_vel;
 geometry_msgs::Vector3 error_data;
 int new_data = 0;
 double k_dis = 0.6;
-double k_dir = 0.8;
-double k_ori = 1.0;
+double k_dir = 1.0;
+double k_ori = 0.5;
 double rho = 0;
 double alpha = 0;
 double eta = 0;
@@ -71,12 +71,17 @@ int main(int argc, char **argv) {
     		alpha = atan2((pose_desired.y-pose_real.y), (pose_desired.x-pose_real.x)) - pose_real.z;
     		eta = pose_desired.z - pose_real.z;
     		
+    		
     		// Wrap alpha and eta to -pi, pi
     		alpha = atan2(sin(alpha), cos(alpha));
 		eta = atan2(sin(eta), cos(eta));
+		
+		error_data.x = rho;
+    		error_data.y = alpha;
+    		error_data.z = eta;
     		
     		// if our distance is within half a centimeter, stop
-    		if (rho < 0.1) {
+    		if (rho < 0.2) {
     			rho = 0.0;
     			alpha = 0.0;
     			// if the orientation is almost right, cut it
@@ -96,9 +101,8 @@ int main(int argc, char **argv) {
     		if (goal_vel.z > 1.0) goal_vel.z = 1.0;
     		else if (goal_vel.z < -1.0) goal_vel.z = -1.0;
     		
-    		error_data.x = rho;
-    		error_data.y = alpha;
-    		error_data.z = eta;
+    		
+    
     		
     		// Publish the velocities
     		error_out.publish(error_data);
