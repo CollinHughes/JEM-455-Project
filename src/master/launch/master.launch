@@ -1,7 +1,8 @@
 <launch>
 	<arg name="xd" default="0" /> <!--60.96, 30.48, 1.571 -->
-	<arg name="yd" default="-60.96" />
-	<arg name="td" default="-1.571" />
+	<arg name="yd" default="0" />
+	<arg name="td" default="0" />
+	<arg name="json_file" default="checkpoints.json" />
 	<node name="master" pkg="master" type="master" output="screen" />
 	<node name="keyboard" pkg="keyboard" type="keyboard" output="screen" />
 	<node name="rosserial_arduino" pkg="rosserial_arduino" type="serial_node.py" args="/dev/ttyACM0" output="screen" />
@@ -11,5 +12,8 @@
 		<param name="xd" value="$(arg xd)" />
 		<param name="yd" value="$(arg yd)" />
 		<param name="td" value="$(arg td)" />
+	</node>
+	<node name="pose_checkpoint" pkg="pose_checkpoint" type="pose_checkpoint"  output="screen" >
+		<param name="json_file" value="$(find pose_checkpoint)/data/$(arg json_file)" />
 	</node>
 </launch>

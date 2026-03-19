@@ -33,8 +33,8 @@ int main(int argc, char **argv) {
 
     while (ros::ok()) {
     	// Computing the inverse kinematics
-    	q_right.data = (local_v.x + (d/2)*local_v.z/3);
-  	q_left.data = (local_v.x - (d/2)*local_v.z/3);
+    	q_right.data = (local_v.x + (d/2)*local_v.z/3)/2;
+  	q_left.data = (local_v.x - (d/2)*local_v.z/3)/2;
 
 	// Publishing the wheel velocities
     	left_wheel_v_pub.publish(q_left);

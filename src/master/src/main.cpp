@@ -7,6 +7,7 @@
 	
 std_msgs::Float64 input_float; 
 std_msgs::UInt16 stopGo;
+std_msgs::UInt16 reset_num;
 geometry_msgs::Vector3 velocities;
 int button_pressed = 0;
 int button_released = 0;
@@ -37,6 +38,10 @@ void keydown_callback(const keyboard::Key& msg) {
     		break;
  	case 103:
  	   	stopGo.data = 1;
+ 	   	break;
+ 	case 114:
+ 	   	reset_num.data = 1;
+ 	   	break;
  	default:
 		break;
  	}
@@ -58,6 +63,9 @@ void keyup_callback(const keyboard::Key& msg) {
 	case 100:
 		d_press = 0;
 		break;
+	case 114:
+		reset_num.data = 0;
+		break;
 	default:
 		break;
 	}
@@ -70,7 +78,9 @@ int main(int argc, char **argv) {
 	ros::Subscriber keydown_in = n.subscribe("/keyboard/keydown", 1, keydown_callback);
 	ros::Subscriber keyup_in = n.subscribe("/keyboard/keyup", 1, keyup_callback);
 	ros::Publisher startStop = n.advertise<std_msgs::UInt16>("startStop", 1);
-
+	ros::Publisher reset = n.advertise<std_msgs::UInt16>("reset", 1);
+	ros::Publisher pose_controler_global = n.advertise<geometry_msgs::Vector3>("pose_controler_global", 1);
+	
 	input_float.data = 0.0; 
 	stopGo.data = 0;
 	ros::Rate rate(50);
@@ -82,6 +92,7 @@ int main(int argc, char **argv) {
 		if (newData == 1) {
 			newData = 0;
 			startStop.publish(stopGo);
+			reset.publish(reset_num);
 		}
 
 		//local_velocities.publish(velocities);

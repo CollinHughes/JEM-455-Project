@@ -628,6 +628,12 @@ oled_display_node_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/oled_display_node
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
 
 //Value Computed by CMake
+pose_checkpoint_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/pose_checkpoint
+
+//Value Computed by CMake
+pose_checkpoint_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/pose_checkpoint
+
+//Value Computed by CMake
 pose_controller_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/pose_controller
 
 //Value Computed by CMake
@@ -840,7 +846,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=20
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

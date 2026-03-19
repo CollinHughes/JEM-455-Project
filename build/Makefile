@@ -688,6 +688,19 @@ mobile_ik/fast:
 .PHONY : mobile_ik/fast
 
 #=============================================================================
+# Target rules for targets named pose_checkpoint
+
+# Build rule for target.
+pose_checkpoint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_checkpoint
+.PHONY : pose_checkpoint
+
+# fast build rule for target.
+pose_checkpoint/fast:
+	$(MAKE) -f pose_checkpoint/CMakeFiles/pose_checkpoint.dir/build.make pose_checkpoint/CMakeFiles/pose_checkpoint.dir/build
+.PHONY : pose_checkpoint/fast
+
+#=============================================================================
 # Target rules for targets named pose_est_genpy
 
 # Build rule for target.
@@ -2001,6 +2014,7 @@ help:
 	@echo "... keyboard_genpy"
 	@echo "... master"
 	@echo "... mobile_ik"
+	@echo "... pose_checkpoint"
 	@echo "... pose_est_genpy"
 	@echo "... pose_est_gennodejs"
 	@echo "... pose_est_generate_messages_py"

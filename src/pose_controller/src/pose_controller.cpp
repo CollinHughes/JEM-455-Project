@@ -14,7 +14,7 @@ geometry_msgs::Vector3 error_data;
 int new_data = 0;
 double k_dis = 0.6;
 double k_dir = 1.0;
-double k_ori = 0.5;
+double k_ori = 0.6;
 double rho = 0;
 double alpha = 0;
 double eta = 0;
@@ -76,9 +76,7 @@ int main(int argc, char **argv) {
     		alpha = atan2(sin(alpha), cos(alpha));
 		eta = atan2(sin(eta), cos(eta));
 		
-		error_data.x = rho;
-    		error_data.y = alpha;
-    		error_data.z = eta;
+		
     		
     		// if our distance is within half a centimeter, stop
     		if (rho < 0.2) {
@@ -101,7 +99,10 @@ int main(int argc, char **argv) {
     		if (goal_vel.z > 1.0) goal_vel.z = 1.0;
     		else if (goal_vel.z < -1.0) goal_vel.z = -1.0;
     		
-    		
+    		if (fabs(eta) < .1) eta = 0.0;
+    		error_data.x = rho;
+    		error_data.y = alpha;
+    		error_data.z = eta;
     
     		
     		// Publish the velocities
