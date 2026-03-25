@@ -68,27 +68,17 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -101,18 +91,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -134,6 +112,28 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,231 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: ros-keyboard-master/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ros-keyboard-master/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/keyboard.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/keyboard.dir/rule
-
-# Convenience name for target.
-keyboard: ros-keyboard-master/CMakeFiles/keyboard.dir/rule
-
-.PHONY : keyboard
-
-# fast build rule for target.
-keyboard/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard.dir/build.make ros-keyboard-master/CMakeFiles/keyboard.dir/build
-.PHONY : keyboard/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: ros-keyboard-master/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/roscpp_generate_messages_py.dir/build.make ros-keyboard-master/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/rule
-
-# Convenience name for target.
-keyboard_generate_messages_py: ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/rule
-
-.PHONY : keyboard_generate_messages_py
-
-# fast build rule for target.
-keyboard_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/build
-.PHONY : keyboard_generate_messages_py/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: ros-keyboard-master/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/roscpp_generate_messages_eus.dir/build.make ros-keyboard-master/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: ros-keyboard-master/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ros-keyboard-master/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/rule
-
-# Convenience name for target.
-keyboard_geneus: ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/rule
-
-.PHONY : keyboard_geneus
-
-# fast build rule for target.
-keyboard_geneus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/build
-.PHONY : keyboard_geneus/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/rule
-
-# Convenience name for target.
-keyboard_genlisp: ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/rule
-
-.PHONY : keyboard_genlisp
-
-# fast build rule for target.
-keyboard_genlisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/build
-.PHONY : keyboard_genlisp/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_py.dir/build.make ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 ros-keyboard-master/CMakeFiles/keyboard_generate_messages.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_generate_messages.dir/rule
 .PHONY : ros-keyboard-master/CMakeFiles/keyboard_generate_messages.dir/rule
@@ -406,51 +181,6 @@ keyboard_generate_messages: ros-keyboard-master/CMakeFiles/keyboard_generate_mes
 keyboard_generate_messages/fast:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_generate_messages.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_generate_messages.dir/build
 .PHONY : keyboard_generate_messages/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-keyboard_generate_messages_cpp: ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/rule
-
-.PHONY : keyboard_generate_messages_cpp
-
-# fast build rule for target.
-keyboard_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/build
-.PHONY : keyboard_generate_messages_cpp/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/rule
-
-# Convenience name for target.
-_keyboard_generate_messages_check_deps_Key: ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/rule
-
-.PHONY : _keyboard_generate_messages_check_deps_Key
-
-# fast build rule for target.
-_keyboard_generate_messages_check_deps_Key/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/build.make ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/build
-.PHONY : _keyboard_generate_messages_check_deps_Key/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-keyboard_generate_messages_lisp: ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/rule
-
-.PHONY : keyboard_generate_messages_lisp
-
-# fast build rule for target.
-keyboard_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/build
-.PHONY : keyboard_generate_messages_lisp/fast
 
 # Convenience name for target.
 ros-keyboard-master/CMakeFiles/keyboard_generate_messages_nodejs.dir/rule:
@@ -468,34 +198,49 @@ keyboard_generate_messages_nodejs/fast:
 .PHONY : keyboard_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/rule
+.PHONY : ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_eus: ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+keyboard_generate_messages_py: ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_eus
+.PHONY : keyboard_generate_messages_py
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
+keyboard_generate_messages_py/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_generate_messages_py.dir/build
+.PHONY : keyboard_generate_messages_py/fast
 
 # Convenience name for target.
-ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+ros-keyboard-master/CMakeFiles/keyboard.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard.dir/rule
+.PHONY : ros-keyboard-master/CMakeFiles/keyboard.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_eus: ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+keyboard: ros-keyboard-master/CMakeFiles/keyboard.dir/rule
 
-.PHONY : std_msgs_generate_messages_eus
+.PHONY : keyboard
 
 # fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make ros-keyboard-master/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
+keyboard/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard.dir/build.make ros-keyboard-master/CMakeFiles/keyboard.dir/build
+.PHONY : keyboard/fast
+
+# Convenience name for target.
+ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/rule
+.PHONY : ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+keyboard_generate_messages_cpp: ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/rule
+
+.PHONY : keyboard_generate_messages_cpp
+
+# fast build rule for target.
+keyboard_generate_messages_cpp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_generate_messages_cpp.dir/build
+.PHONY : keyboard_generate_messages_cpp/fast
 
 # Convenience name for target.
 ros-keyboard-master/CMakeFiles/keyboard_gencpp.dir/rule:
@@ -528,6 +273,66 @@ keyboard_generate_messages_eus/fast:
 .PHONY : keyboard_generate_messages_eus/fast
 
 # Convenience name for target.
+ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/rule
+.PHONY : ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/rule
+
+# Convenience name for target.
+_keyboard_generate_messages_check_deps_Key: ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/rule
+
+.PHONY : _keyboard_generate_messages_check_deps_Key
+
+# fast build rule for target.
+_keyboard_generate_messages_check_deps_Key/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/build.make ros-keyboard-master/CMakeFiles/_keyboard_generate_messages_check_deps_Key.dir/build
+.PHONY : _keyboard_generate_messages_check_deps_Key/fast
+
+# Convenience name for target.
+ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/rule
+.PHONY : ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+keyboard_generate_messages_lisp: ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/rule
+
+.PHONY : keyboard_generate_messages_lisp
+
+# fast build rule for target.
+keyboard_generate_messages_lisp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_generate_messages_lisp.dir/build
+.PHONY : keyboard_generate_messages_lisp/fast
+
+# Convenience name for target.
+ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/rule
+.PHONY : ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/rule
+
+# Convenience name for target.
+keyboard_geneus: ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/rule
+
+.PHONY : keyboard_geneus
+
+# fast build rule for target.
+keyboard_geneus/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_geneus.dir/build
+.PHONY : keyboard_geneus/fast
+
+# Convenience name for target.
+ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/rule
+.PHONY : ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/rule
+
+# Convenience name for target.
+keyboard_genlisp: ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/rule
+
+.PHONY : keyboard_genlisp
+
+# fast build rule for target.
+keyboard_genlisp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_genlisp.dir/build
+.PHONY : keyboard_genlisp/fast
+
+# Convenience name for target.
 ros-keyboard-master/CMakeFiles/keyboard_gennodejs.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/keyboard_gennodejs.dir/rule
 .PHONY : ros-keyboard-master/CMakeFiles/keyboard_gennodejs.dir/rule
@@ -541,36 +346,6 @@ keyboard_gennodejs: ros-keyboard-master/CMakeFiles/keyboard_gennodejs.dir/rule
 keyboard_gennodejs/fast:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/keyboard_gennodejs.dir/build.make ros-keyboard-master/CMakeFiles/keyboard_gennodejs.dir/build
 .PHONY : keyboard_gennodejs/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make ros-keyboard-master/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ros-keyboard-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ros-keyboard-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : ros-keyboard-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: ros-keyboard-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ros-keyboard-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make ros-keyboard-master/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
 ros-keyboard-master/CMakeFiles/keyboard_genpy.dir/rule:
@@ -648,39 +423,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... test"
-	@echo "... install"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... keyboard"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... keyboard_generate_messages_py"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... roscpp_generate_messages_cpp"
 	@echo "... install/local"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... keyboard_geneus"
-	@echo "... keyboard_genlisp"
+	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... keyboard_generate_messages"
+	@echo "... keyboard_generate_messages_nodejs"
+	@echo "... keyboard_generate_messages_py"
+	@echo "... keyboard"
+	@echo "... list_install_components"
+	@echo "... test"
 	@echo "... keyboard_generate_messages_cpp"
+	@echo "... keyboard_gencpp"
+	@echo "... edit_cache"
+	@echo "... keyboard_generate_messages_eus"
 	@echo "... _keyboard_generate_messages_check_deps_Key"
 	@echo "... keyboard_generate_messages_lisp"
-	@echo "... list_install_components"
-	@echo "... keyboard_generate_messages_nodejs"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... keyboard_gencpp"
-	@echo "... keyboard_generate_messages_eus"
+	@echo "... keyboard_geneus"
+	@echo "... keyboard_genlisp"
 	@echo "... keyboard_gennodejs"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... keyboard_genpy"
 	@echo "... src/keyboard.o"
 	@echo "... src/keyboard.i"

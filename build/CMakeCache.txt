@@ -532,6 +532,12 @@ imu_process_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/imu_process
 imu_process_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/imu_process
 
 //Value Computed by CMake
+jetarm_fk_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/jetarm_fk
+
+//Value Computed by CMake
+jetarm_fk_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/jetarm_fk
+
+//Value Computed by CMake
 keyboard_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/ros-keyboard-master
 
 //The directory containing a CMake configuration file for keyboard.
@@ -846,7 +852,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=21
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=22
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
