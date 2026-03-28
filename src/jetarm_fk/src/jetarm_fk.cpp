@@ -41,14 +41,19 @@ int main(int argc, char **argv) {
 	    	// Computing the forward kinematics
 	    	if (data_in_flag == 1) {
 	    		data_in_flag = 0;
-		    	q1 = data_in.position[1];
-		    	q2 = data_in.position[2];
-		    	q3 = data_in.position[3];
-		    	q4 = data_in.position[4];
-		    	q5 = data_in.position[5];
-		    	arm.x = 0.06471*sin(q1 - q2) - 0.05743*sin(q2 - q1 + q3 + q4) - 0.06471*sin(q1 + q2 + q3) - 0.05743*sin(q1 + q2 + q3 + q4) - 0.06471*sin(q1 + q2) - 0.06471*sin(q2 - q1 + q3);
-			arm.y = 0.06471*cos(q1 + q2 + q3) - 0.05743*cos(q2 - q1 + q3 + q4) - 0.06471*cos(q1 - q2) + 0.05743*cos(q1 + q2 + q3 + q4) + 0.06471*cos(q1 + q2) - 0.06471*cos(q2 - q1 + q3);
-			arm.z = 0.11486*cos(q2 + q3 + q4) + 0.12942*cos(q2 + q3) + 0.12942*cos(q2) + 0.10432;
+		    	q1 = data_in.position[0];
+		    	q2 = data_in.position[1];
+		    	q3 = data_in.position[2];
+		    	q4 = data_in.position[3];
+		    	q5 = data_in.position[4];
+		    	// Z pointing up
+		    	//arm.x = 0.06471*sin(q1 - q2) - 0.05743*sin(q2 - q1 + q3 + q4) - 0.06471*sin(q1 + q2 + q3) - 0.05743*sin(q1 + q2 + q3 + q4) - 0.06471*sin(q1 + q2) - 0.06471*sin(q2 - q1 + q3);
+			//arm.y = 0.06471*cos(q1 + q2 + q3) - 0.05743*cos(q2 - q1 + q3 + q4) - 0.06471*cos(q1 - q2) + 0.05743*cos(q1 + q2 + q3 + q4) + 0.06471*cos(q1 + q2) - 0.06471*cos(q2 - q1 + q3);
+			
+			arm.x = 0.06471*sin(q1-q2)-0.06471*sin(q1+q2+q3)-0.06471*sin(q2-q1+q3)-0.05743*sin(q1+q2+q3+q4)-0.06471*sin(q1+q2)-0.05743*sin(q2-q1+q3+q4);
+			arm.y = 0.06471*cos(q1+q2+q3)-0.06471*cos(q1-q2)-0.06471*cos(q2-q1+q3)+0.05743*cos(q1+q2+q3+q4)+0.06471*cos(q1+q2)-0.05743*cos(q2-q1+q3+q4);
+			arm.z = 0.11486*cos(q2+q3+q4)+0.12942*cos(q2+q3)+0.12942*cos(q2)+0.10432;
+			//arm.z = 0.11486*cos(q2+q3+q4)+0.12942*cos(q2+q3)+0.12942*cos(q2)+0.10432;
 		}
 
 	    	arm_space_out.publish(arm);

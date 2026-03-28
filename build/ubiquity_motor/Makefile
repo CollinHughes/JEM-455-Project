@@ -80,16 +80,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -100,28 +90,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -134,6 +102,38 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,64 +168,139 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/motor_hardware_test.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/motor_hardware_test.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/motor_hardware_test.dir/rule
+ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/rule
 
 # Convenience name for target.
-motor_hardware_test: ubiquity_motor/CMakeFiles/motor_hardware_test.dir/rule
+ubiquity_motor_genpy: ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/rule
 
-.PHONY : motor_hardware_test
+.PHONY : ubiquity_motor_genpy
 
 # fast build rule for target.
-motor_hardware_test/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/motor_hardware_test.dir/build.make ubiquity_motor/CMakeFiles/motor_hardware_test.dir/build
-.PHONY : motor_hardware_test/fast
+ubiquity_motor_genpy/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/build
+.PHONY : ubiquity_motor_genpy/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
+ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
+ubiquity_motor_generate_messages_lisp: ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/rule
 
-.PHONY : _run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test
+.PHONY : ubiquity_motor_generate_messages_lisp
 
 # fast build rule for target.
-_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/build
-.PHONY : _run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test/fast
+ubiquity_motor_generate_messages_lisp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/build
+.PHONY : ubiquity_motor_generate_messages_lisp/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
+ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test: ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
+ubiquity_motor_generate_messages_eus: ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/rule
 
-.PHONY : run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test
+.PHONY : ubiquity_motor_generate_messages_eus
 
 # fast build rule for target.
-run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/build.make ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/build
-.PHONY : run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test/fast
+ubiquity_motor_generate_messages_eus/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/build
+.PHONY : ubiquity_motor_generate_messages_eus/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/rule
+ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/rule
 
 # Convenience name for target.
-_run_tests_ubiquity_motor_rostest: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/rule
+ubiquity_motor_gencpp: ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/rule
 
-.PHONY : _run_tests_ubiquity_motor_rostest
+.PHONY : ubiquity_motor_gencpp
 
 # fast build rule for target.
-_run_tests_ubiquity_motor_rostest/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/build
-.PHONY : _run_tests_ubiquity_motor_rostest/fast
+ubiquity_motor_gencpp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/build
+.PHONY : ubiquity_motor_gencpp/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+controller_manager_msgs_generate_messages_eus: ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
+
+.PHONY : controller_manager_msgs_generate_messages_eus
+
+# fast build rule for target.
+controller_manager_msgs_generate_messages_eus/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
+.PHONY : controller_manager_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/rule
+
+# Convenience name for target.
+ubiquity_motor_gennodejs: ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/rule
+
+.PHONY : ubiquity_motor_gennodejs
+
+# fast build rule for target.
+ubiquity_motor_gennodejs/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/build
+.PHONY : ubiquity_motor_gennodejs/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/rule
+
+# Convenience name for target.
+ubiquity_motor_genlisp: ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/rule
+
+.PHONY : ubiquity_motor_genlisp
+
+# fast build rule for target.
+ubiquity_motor_genlisp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/build
+.PHONY : ubiquity_motor_genlisp/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/motor_param_test.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/motor_param_test.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/motor_param_test.dir/rule
+
+# Convenience name for target.
+motor_param_test: ubiquity_motor/CMakeFiles/motor_param_test.dir/rule
+
+.PHONY : motor_param_test
+
+# fast build rule for target.
+motor_param_test/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/motor_param_test.dir/build.make ubiquity_motor/CMakeFiles/motor_param_test.dir/build
+.PHONY : motor_param_test/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/rule
+
+# Convenience name for target.
+_ubiquity_motor_generate_messages_check_deps_MotorState: ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/rule
+
+.PHONY : _ubiquity_motor_generate_messages_check_deps_MotorState
+
+# fast build rule for target.
+_ubiquity_motor_generate_messages_check_deps_MotorState/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/build.make ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/build
+.PHONY : _ubiquity_motor_generate_messages_check_deps_MotorState/fast
 
 # Convenience name for target.
 ubiquity_motor/CMakeFiles/ubiquity_motor_gencfg.dir/rule:
@@ -258,79 +333,49 @@ motor_serial_test/fast:
 .PHONY : motor_serial_test/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+ubiquity_motor_geneus: ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_eus
+.PHONY : ubiquity_motor_geneus
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+ubiquity_motor_geneus/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/build
+.PHONY : ubiquity_motor_geneus/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/rule
 
 # Convenience name for target.
-diagnostic_msgs_generate_messages_eus: ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+ubiquity_motor_generate_messages: ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/rule
 
-.PHONY : diagnostic_msgs_generate_messages_eus
+.PHONY : ubiquity_motor_generate_messages
 
 # fast build rule for target.
-diagnostic_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
-.PHONY : diagnostic_msgs_generate_messages_eus/fast
+ubiquity_motor_generate_messages/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/build
+.PHONY : ubiquity_motor_generate_messages/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
 # Convenience name for target.
-nav_msgs_generate_messages_py: ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+dynamic_reconfigure_generate_messages_py: ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
-.PHONY : nav_msgs_generate_messages_py
+.PHONY : dynamic_reconfigure_generate_messages_py
 
 # fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_nodejs: ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
-.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_lisp: ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_lisp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_lisp/fast
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
@@ -348,34 +393,49 @@ nav_msgs_generate_messages_cpp/fast:
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
+ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
 
 # Convenience name for target.
-_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
+_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
 
-.PHONY : _run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test
+.PHONY : _run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test
 
 # fast build rule for target.
-_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/build
-.PHONY : _run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test/fast
+_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/build
+.PHONY : _run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor.dir/rule
+ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-ubiquity_motor: ubiquity_motor/CMakeFiles/ubiquity_motor.dir/rule
+controller_manager_msgs_generate_messages_py: ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
 
-.PHONY : ubiquity_motor
+.PHONY : controller_manager_msgs_generate_messages_py
 
 # fast build rule for target.
-ubiquity_motor/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor.dir/build
-.PHONY : ubiquity_motor/fast
+controller_manager_msgs_generate_messages_py/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
+.PHONY : controller_manager_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ubiquity_motor/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
@@ -423,36 +483,6 @@ nav_msgs_generate_messages_eus/fast:
 .PHONY : nav_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
-
-# Convenience name for target.
-run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test: ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
-
-.PHONY : run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test
-
-# fast build rule for target.
-run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/build.make ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/build
-.PHONY : run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_py: ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_py
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
-.PHONY : diagnostic_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 .PHONY : ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
@@ -468,184 +498,49 @@ nav_msgs_generate_messages_lisp/fast:
 .PHONY : nav_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-actionlib_msgs_generate_messages_nodejs: ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule
+controller_manager_msgs_generate_messages_nodejs: ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : actionlib_msgs_generate_messages_nodejs
+.PHONY : controller_manager_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-actionlib_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build.make ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
-.PHONY : actionlib_msgs_generate_messages_nodejs/fast
+controller_manager_msgs_generate_messages_nodejs/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build.make ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
+.PHONY : controller_manager_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test: ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_lisp
+.PHONY : run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/build.make ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/build
+.PHONY : run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/motor_node.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/motor_node.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/motor_node.dir/rule
+ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-motor_node: ubiquity_motor/CMakeFiles/motor_node.dir/rule
+dynamic_reconfigure_generate_messages_eus: ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
-.PHONY : motor_node
+.PHONY : dynamic_reconfigure_generate_messages_eus
 
 # fast build rule for target.
-motor_node/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/motor_node.dir/build.make ubiquity_motor/CMakeFiles/motor_node.dir/build
-.PHONY : motor_node/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_cpp: ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
-.PHONY : actionlib_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule
-
-# Convenience name for target.
-_run_tests_ubiquity_motor_gtest_motor_message_test: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule
-
-.PHONY : _run_tests_ubiquity_motor_gtest_motor_message_test
-
-# fast build rule for target.
-_run_tests_ubiquity_motor_gtest_motor_message_test/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/build
-.PHONY : _run_tests_ubiquity_motor_gtest_motor_message_test/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_eus: ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_eus
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build.make ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_eus.dir/build
-.PHONY : controller_manager_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/rule
-
-# Convenience name for target.
-_ubiquity_motor_generate_messages_check_deps_MotorState: ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/rule
-
-.PHONY : _ubiquity_motor_generate_messages_check_deps_MotorState
-
-# fast build rule for target.
-_ubiquity_motor_generate_messages_check_deps_MotorState/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/build.make ubiquity_motor/CMakeFiles/_ubiquity_motor_generate_messages_check_deps_MotorState.dir/build
-.PHONY : _ubiquity_motor_generate_messages_check_deps_MotorState/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-controller_manager_msgs_generate_messages_py: ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/rule
-
-.PHONY : controller_manager_msgs_generate_messages_py
-
-# fast build rule for target.
-controller_manager_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build.make ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_py.dir/build
-.PHONY : controller_manager_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_nodejs: ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
-.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_eus: ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_eus
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build.make ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/build
-.PHONY : actionlib_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/probe_robot.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/probe_robot.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/probe_robot.dir/rule
-
-# Convenience name for target.
-probe_robot: ubiquity_motor/CMakeFiles/probe_robot.dir/rule
-
-.PHONY : probe_robot
-
-# fast build rule for target.
-probe_robot/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/probe_robot.dir/build.make ubiquity_motor/CMakeFiles/probe_robot.dir/build
-.PHONY : probe_robot/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/rule
-
-# Convenience name for target.
-ubiquity_motor_gencpp: ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/rule
-
-.PHONY : ubiquity_motor_gencpp
-
-# fast build rule for target.
-ubiquity_motor_gencpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_gencpp.dir/build
-.PHONY : ubiquity_motor_gencpp/fast
+dynamic_reconfigure_generate_messages_eus/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
 ubiquity_motor/CMakeFiles/controller_manager_msgs_generate_messages_cpp.dir/rule:
@@ -663,34 +558,34 @@ controller_manager_msgs_generate_messages_cpp/fast:
 .PHONY : controller_manager_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+ubiquity_motor/CMakeFiles/motor_hardware_test.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/motor_hardware_test.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/motor_hardware_test.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+motor_hardware_test: ubiquity_motor/CMakeFiles/motor_hardware_test.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_cpp
+.PHONY : motor_hardware_test
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+motor_hardware_test/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/motor_hardware_test.dir/build.make ubiquity_motor/CMakeFiles/motor_hardware_test.dir/build
+.PHONY : motor_hardware_test/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-actionlib_msgs_generate_messages_py: ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
+dynamic_reconfigure_generate_messages_lisp: ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 
-.PHONY : actionlib_msgs_generate_messages_py
+.PHONY : dynamic_reconfigure_generate_messages_lisp
 
 # fast build rule for target.
-actionlib_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
-.PHONY : actionlib_msgs_generate_messages_py/fast
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
 
 # Convenience name for target.
 ubiquity_motor/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
@@ -753,141 +648,6 @@ motor_message_test/fast:
 .PHONY : motor_message_test/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_cpp: ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_cpp
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make ubiquity_motor/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
-.PHONY : diagnostic_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-ubiquity_motor_generate_messages_eus: ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/rule
-
-.PHONY : ubiquity_motor_generate_messages_eus
-
-# fast build rule for target.
-ubiquity_motor_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_eus.dir/build
-.PHONY : ubiquity_motor_generate_messages_eus/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/rule
-
-# Convenience name for target.
-ubiquity_motor_generate_messages: ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/rule
-
-.PHONY : ubiquity_motor_generate_messages
-
-# fast build rule for target.
-ubiquity_motor_generate_messages/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages.dir/build
-.PHONY : ubiquity_motor_generate_messages/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/rule
-
-# Convenience name for target.
-ubiquity_motor_geneus: ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/rule
-
-.PHONY : ubiquity_motor_geneus
-
-# fast build rule for target.
-ubiquity_motor_geneus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_geneus.dir/build
-.PHONY : ubiquity_motor_geneus/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-ubiquity_motor_generate_messages_lisp: ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/rule
-
-.PHONY : ubiquity_motor_generate_messages_lisp
-
-# fast build rule for target.
-ubiquity_motor_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_lisp.dir/build
-.PHONY : ubiquity_motor_generate_messages_lisp/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/rule
-
-# Convenience name for target.
-ubiquity_motor_genlisp: ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/rule
-
-.PHONY : ubiquity_motor_genlisp
-
-# fast build rule for target.
-ubiquity_motor_genlisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_genlisp.dir/build
-.PHONY : ubiquity_motor_genlisp/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/rule
-
-# Convenience name for target.
-ubiquity_motor_gennodejs: ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/rule
-
-.PHONY : ubiquity_motor_gennodejs
-
-# fast build rule for target.
-ubiquity_motor_gennodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_gennodejs.dir/build
-.PHONY : ubiquity_motor_gennodejs/fast
-
-# Convenience name for target.
-ubiquity_motor/CMakeFiles/motor_param_test.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/motor_param_test.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/motor_param_test.dir/rule
-
-# Convenience name for target.
-motor_param_test: ubiquity_motor/CMakeFiles/motor_param_test.dir/rule
-
-.PHONY : motor_param_test
-
-# fast build rule for target.
-motor_param_test/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/motor_param_test.dir/build.make ubiquity_motor/CMakeFiles/motor_param_test.dir/build
-.PHONY : motor_param_test/fast
-
-# Convenience name for target.
 ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_py.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_py.dir/rule
 .PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_generate_messages_py.dir/rule
@@ -903,34 +663,34 @@ ubiquity_motor_generate_messages_py/fast:
 .PHONY : ubiquity_motor_generate_messages_py/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/rule
+ubiquity_motor/CMakeFiles/motor_node.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/motor_node.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/motor_node.dir/rule
 
 # Convenience name for target.
-ubiquity_motor_genpy: ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/rule
+motor_node: ubiquity_motor/CMakeFiles/motor_node.dir/rule
 
-.PHONY : ubiquity_motor_genpy
+.PHONY : motor_node
 
 # fast build rule for target.
-ubiquity_motor_genpy/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor_genpy.dir/build
-.PHONY : ubiquity_motor_genpy/fast
+motor_node/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/motor_node.dir/build.make ubiquity_motor/CMakeFiles/motor_node.dir/build
+.PHONY : motor_node/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/rule
+ubiquity_motor/CMakeFiles/probe_robot.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/probe_robot.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/probe_robot.dir/rule
 
 # Convenience name for target.
-run_tests_ubiquity_motor: ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/rule
+probe_robot: ubiquity_motor/CMakeFiles/probe_robot.dir/rule
 
-.PHONY : run_tests_ubiquity_motor
+.PHONY : probe_robot
 
 # fast build rule for target.
-run_tests_ubiquity_motor/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/build.make ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/build
-.PHONY : run_tests_ubiquity_motor/fast
+probe_robot/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/probe_robot.dir/build.make ubiquity_motor/CMakeFiles/probe_robot.dir/build
+.PHONY : probe_robot/fast
 
 # Convenience name for target.
 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor.dir/rule:
@@ -991,6 +751,21 @@ _run_tests_ubiquity_motor_gtest: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_m
 _run_tests_ubiquity_motor_gtest/fast:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest.dir/build
 .PHONY : _run_tests_ubiquity_motor_gtest/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule
+
+# Convenience name for target.
+_run_tests_ubiquity_motor_gtest_motor_message_test: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule
+
+.PHONY : _run_tests_ubiquity_motor_gtest_motor_message_test
+
+# fast build rule for target.
+_run_tests_ubiquity_motor_gtest_motor_message_test/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_gtest_motor_message_test.dir/build
+.PHONY : _run_tests_ubiquity_motor_gtest_motor_message_test/fast
 
 # Convenience name for target.
 ubiquity_motor/CMakeFiles/clean_test_results_ubiquity_motor.dir/rule:
@@ -1083,6 +858,21 @@ shared_queue_test/fast:
 .PHONY : shared_queue_test/fast
 
 # Convenience name for target.
+ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make ubiquity_motor/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule
 .PHONY : ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_gtest_motor_message_test.dir/rule
@@ -1113,21 +903,6 @@ run_tests_ubiquity_motor_gtest_shared_queue_test/fast:
 .PHONY : run_tests_ubiquity_motor_gtest_shared_queue_test/fast
 
 # Convenience name for target.
-ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-.PHONY : ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_msgs_generate_messages_lisp: ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_msgs_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make ubiquity_motor/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
-.PHONY : actionlib_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest.dir/rule
 .PHONY : ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest.dir/rule
@@ -1141,6 +916,81 @@ run_tests_ubiquity_motor_rostest: ubiquity_motor/CMakeFiles/run_tests_ubiquity_m
 run_tests_ubiquity_motor_rostest/fast:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest.dir/build.make ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest.dir/build
 .PHONY : run_tests_ubiquity_motor_rostest/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/rule
+
+# Convenience name for target.
+_run_tests_ubiquity_motor_rostest: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/rule
+
+.PHONY : _run_tests_ubiquity_motor_rostest
+
+# fast build rule for target.
+_run_tests_ubiquity_motor_rostest/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest.dir/build
+.PHONY : _run_tests_ubiquity_motor_rostest/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
+
+# Convenience name for target.
+run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test: ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/rule
+
+.PHONY : run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test
+
+# fast build rule for target.
+run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/build.make ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test.dir/build
+.PHONY : run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/ubiquity_motor.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/ubiquity_motor.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/ubiquity_motor.dir/rule
+
+# Convenience name for target.
+ubiquity_motor: ubiquity_motor/CMakeFiles/ubiquity_motor.dir/rule
+
+.PHONY : ubiquity_motor
+
+# fast build rule for target.
+ubiquity_motor/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/ubiquity_motor.dir/build.make ubiquity_motor/CMakeFiles/ubiquity_motor.dir/build
+.PHONY : ubiquity_motor/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
+
+# Convenience name for target.
+_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test: ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/rule
+
+.PHONY : _run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test
+
+# fast build rule for target.
+_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/build.make ubiquity_motor/CMakeFiles/_run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test.dir/build
+.PHONY : _run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test/fast
+
+# Convenience name for target.
+ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/rule
+.PHONY : ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/rule
+
+# Convenience name for target.
+run_tests_ubiquity_motor: ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/rule
+
+.PHONY : run_tests_ubiquity_motor
+
+# fast build rule for target.
+run_tests_ubiquity_motor/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/build.make ubiquity_motor/CMakeFiles/run_tests_ubiquity_motor.dir/build
+.PHONY : run_tests_ubiquity_motor/fast
 
 serial/src/impl/list_ports/list_ports_linux.o: serial/src/impl/list_ports/list_ports_linux.cc.o
 
@@ -1501,76 +1351,66 @@ help:
 	@echo "... depend"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... motor_hardware_test"
-	@echo "... _run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test"
-	@echo "... run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test"
-	@echo "... _run_tests_ubiquity_motor_rostest"
+	@echo "... ubiquity_motor_genpy"
+	@echo "... ubiquity_motor_generate_messages_lisp"
+	@echo "... ubiquity_motor_generate_messages_eus"
+	@echo "... ubiquity_motor_gencpp"
+	@echo "... controller_manager_msgs_generate_messages_eus"
+	@echo "... ubiquity_motor_gennodejs"
+	@echo "... ubiquity_motor_genlisp"
+	@echo "... motor_param_test"
+	@echo "... _ubiquity_motor_generate_messages_check_deps_MotorState"
 	@echo "... ubiquity_motor_gencfg"
 	@echo "... motor_serial_test"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... diagnostic_msgs_generate_messages_eus"
-	@echo "... nav_msgs_generate_messages_py"
-	@echo "... controller_manager_msgs_generate_messages_nodejs"
-	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... ubiquity_motor_geneus"
+	@echo "... ubiquity_motor_generate_messages"
+	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_cpp"
-	@echo "... _run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test"
-	@echo "... ubiquity_motor"
+	@echo "... _run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test"
+	@echo "... controller_manager_msgs_generate_messages_py"
+	@echo "... nav_msgs_generate_messages_py"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... ur_serial"
 	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test"
-	@echo "... diagnostic_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... actionlib_msgs_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... motor_node"
-	@echo "... actionlib_msgs_generate_messages_cpp"
-	@echo "... _run_tests_ubiquity_motor_gtest_motor_message_test"
-	@echo "... controller_manager_msgs_generate_messages_eus"
-	@echo "... _ubiquity_motor_generate_messages_check_deps_MotorState"
-	@echo "... controller_manager_msgs_generate_messages_py"
-	@echo "... diagnostic_msgs_generate_messages_nodejs"
-	@echo "... actionlib_msgs_generate_messages_eus"
-	@echo "... probe_robot"
-	@echo "... ubiquity_motor_gencpp"
+	@echo "... controller_manager_msgs_generate_messages_nodejs"
+	@echo "... run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test"
+	@echo "... rebuild_cache"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... controller_manager_msgs_generate_messages_cpp"
-	@echo "... test"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... motor_hardware_test"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... controller_manager_msgs_generate_messages_lisp"
 	@echo "... ubiquity_motor_generate_messages_nodejs"
 	@echo "... motor_message_test"
-	@echo "... diagnostic_msgs_generate_messages_cpp"
-	@echo "... ubiquity_motor_generate_messages_eus"
-	@echo "... ubiquity_motor_generate_messages"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... ubiquity_motor_geneus"
-	@echo "... ubiquity_motor_generate_messages_lisp"
-	@echo "... ubiquity_motor_genlisp"
-	@echo "... ubiquity_motor_gennodejs"
-	@echo "... motor_param_test"
 	@echo "... ubiquity_motor_generate_messages_py"
-	@echo "... ubiquity_motor_genpy"
-	@echo "... edit_cache"
-	@echo "... run_tests_ubiquity_motor"
+	@echo "... motor_node"
+	@echo "... probe_robot"
 	@echo "... _run_tests_ubiquity_motor"
 	@echo "... _run_tests_ubiquity_motor_gtest_shared_queue_test"
 	@echo "... run_tests_ubiquity_motor_gtest"
 	@echo "... install/strip"
 	@echo "... _run_tests_ubiquity_motor_gtest"
+	@echo "... _run_tests_ubiquity_motor_gtest_motor_message_test"
 	@echo "... clean_test_results_ubiquity_motor"
 	@echo "... run_tests_ubiquity_motor_gtest_motor_serial_test"
 	@echo "... ubiquity_motor_generate_messages_cpp"
 	@echo "... _run_tests_ubiquity_motor_gtest_motor_serial_test"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... shared_queue_test"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... test"
 	@echo "... run_tests_ubiquity_motor_gtest_motor_message_test"
 	@echo "... run_tests_ubiquity_motor_gtest_shared_queue_test"
-	@echo "... actionlib_msgs_generate_messages_lisp"
+	@echo "... list_install_components"
 	@echo "... run_tests_ubiquity_motor_rostest"
+	@echo "... _run_tests_ubiquity_motor_rostest"
+	@echo "... run_tests_ubiquity_motor_rostest_test_rostest_motor_parameters.test"
+	@echo "... ubiquity_motor"
+	@echo "... _run_tests_ubiquity_motor_rostest_test_rostest_motor_hardware.test"
+	@echo "... run_tests_ubiquity_motor"
+	@echo "... edit_cache"
 	@echo "... serial/src/impl/list_ports/list_ports_linux.o"
 	@echo "... serial/src/impl/list_ports/list_ports_linux.i"
 	@echo "... serial/src/impl/list_ports/list_ports_linux.s"

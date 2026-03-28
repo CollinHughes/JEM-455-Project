@@ -19,7 +19,7 @@ add_custom_target(pose_est_generate_messages ALL)
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/src/pose_est/msg/pose_est_msg.msg" NAME_WE)
 add_custom_target(_pose_est_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pose_est" "/home/ubuntu/catkin_ws/src/pose_est/msg/pose_est_msg.msg" "geometry_msgs/Point:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pose_est" "/home/ubuntu/catkin_ws/src/pose_est/msg/pose_est_msg.msg" "std_msgs/Header:geometry_msgs/Point"
 )
 
 #
@@ -31,7 +31,7 @@ add_custom_target(_pose_est_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(pose_est
   "/home/ubuntu/catkin_ws/src/pose_est/msg/pose_est_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pose_est
 )
 
@@ -64,7 +64,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pose_est_generate_messages_cpp)
 _generate_msg_eus(pose_est
   "/home/ubuntu/catkin_ws/src/pose_est/msg/pose_est_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pose_est
 )
 
@@ -97,7 +97,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pose_est_generate_messages_eus)
 _generate_msg_lisp(pose_est
   "/home/ubuntu/catkin_ws/src/pose_est/msg/pose_est_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pose_est
 )
 
@@ -130,7 +130,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pose_est_generate_messages_lisp)
 _generate_msg_nodejs(pose_est
   "/home/ubuntu/catkin_ws/src/pose_est/msg/pose_est_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pose_est
 )
 
@@ -163,7 +163,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pose_est_generate_messages_nodejs)
 _generate_msg_py(pose_est
   "/home/ubuntu/catkin_ws/src/pose_est/msg/pose_est_msg.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pose_est
 )
 
