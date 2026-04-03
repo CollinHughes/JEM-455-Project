@@ -1520,6 +1520,19 @@ jetarm_fk/fast:
 .PHONY : jetarm_fk/fast
 
 #=============================================================================
+# Target rules for targets named jetarm_ik
+
+# Build rule for target.
+jetarm_ik: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 jetarm_ik
+.PHONY : jetarm_ik
+
+# fast build rule for target.
+jetarm_ik/fast:
+	$(MAKE) -f jetarm_ik/CMakeFiles/jetarm_ik.dir/build.make jetarm_ik/CMakeFiles/jetarm_ik.dir/build
+.PHONY : jetarm_ik/fast
+
+#=============================================================================
 # Target rules for targets named keyboard_generate_messages
 
 # Build rule for target.
@@ -2910,6 +2923,7 @@ help:
 	@echo "... _hiwonder_interfaces_generate_messages_check_deps_SetJointRange"
 	@echo "... _hiwonder_interfaces_generate_messages_check_deps_MultiRawIdPosDur"
 	@echo "... jetarm_fk"
+	@echo "... jetarm_ik"
 	@echo "... keyboard_generate_messages"
 	@echo "... keyboard_generate_messages_nodejs"
 	@echo "... keyboard_generate_messages_py"

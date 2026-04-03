@@ -531,6 +531,9 @@ hardware_interface_DIR:PATH=/opt/ros/noetic/share/hardware_interface/cmake
 //Value Computed by CMake
 hiwonder_interfaces_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/hiwonder_interfaces
 
+//The directory containing a CMake configuration file for hiwonder_interfaces.
+hiwonder_interfaces_DIR:PATH=/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/cmake
+
 //Value Computed by CMake
 hiwonder_interfaces_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/hiwonder_interfaces
 
@@ -545,6 +548,12 @@ jetarm_fk_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/jetarm_fk
 
 //Value Computed by CMake
 jetarm_fk_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/jetarm_fk
+
+//Value Computed by CMake
+jetarm_ik_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/jetarm_ik
+
+//Value Computed by CMake
+jetarm_ik_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/jetarm_ik
 
 //Value Computed by CMake
 keyboard_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/ros-keyboard-master
@@ -861,7 +870,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=23
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

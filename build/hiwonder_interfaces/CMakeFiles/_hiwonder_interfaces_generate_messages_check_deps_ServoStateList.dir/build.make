@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
 include hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_ServoStateList.dir/progress.make
 
 hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_ServoStateList:
-	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py hiwonder_interfaces /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg hiwonder_interfaces/ServoState:std_msgs/Header
+	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py hiwonder_interfaces /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg std_msgs/Header:hiwonder_interfaces/ServoState
 
 _hiwonder_interfaces_generate_messages_check_deps_ServoStateList: hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_ServoStateList
 _hiwonder_interfaces_generate_messages_check_deps_ServoStateList: hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_ServoStateList.dir/build.make

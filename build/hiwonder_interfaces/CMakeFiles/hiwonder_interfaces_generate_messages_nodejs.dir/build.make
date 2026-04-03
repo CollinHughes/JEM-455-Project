@@ -154,8 +154,8 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_nodejs: /ho
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/ServoStateList.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/ServoStateList.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/ServoStateList.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/ServoStateList.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/ServoStateList.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Javascript code from hiwonder_interfaces/ServoStateList.msg"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg
 
@@ -247,50 +247,50 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_nodejs: /ho
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveAction.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating Javascript code from hiwonder_interfaces/MoveAction.msg"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionGoal.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating Javascript code from hiwonder_interfaces/MoveActionGoal.msg"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionResult.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating Javascript code from hiwonder_interfaces/MoveActionResult.msg"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionFeedback.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionFeedback.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionFeedback.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionFeedback.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionFeedback.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionFeedback.js: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveActionFeedback.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating Javascript code from hiwonder_interfaces/MoveActionFeedback.msg"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg
@@ -298,15 +298,15 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_nodejs: /ho
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveGoal.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveGoal.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveGoal.js: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveGoal.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveGoal.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveGoal.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Generating Javascript code from hiwonder_interfaces/MoveGoal.msg"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveResult.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveResult.js: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveResult.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveResult.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg/MoveResult.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Generating Javascript code from hiwonder_interfaces/MoveResult.msg"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/msg
 
@@ -342,16 +342,16 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_nodejs: /ho
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/GetRobotPose.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/GetRobotPose.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/GetRobotPose.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/GetRobotPose.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/GetRobotPose.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/GetRobotPose.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Generating Javascript code from hiwonder_interfaces/GetRobotPose.srv"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointsValue.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointsValue.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointsValue.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointsValue.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointsValue.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointsValue.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Generating Javascript code from hiwonder_interfaces/SetJointsValue.srv"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv
@@ -382,8 +382,8 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_nodejs: /ho
 
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointValue.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointValue.js: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointValue.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointValue.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointValue.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv/SetJointValue.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Generating Javascript code from hiwonder_interfaces/SetJointValue.srv"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/hiwonder_interfaces/srv

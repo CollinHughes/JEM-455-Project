@@ -64,7 +64,7 @@ add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg" "hiwonder_interfaces/ServoState:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg" "std_msgs/Header:hiwonder_interfaces/ServoState"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoMove.msg" NAME_WE)
@@ -144,32 +144,32 @@ add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg" "hiwonder_interfaces/MoveFeedback:geometry_msgs/Point:hiwonder_interfaces/MoveResult:hiwonder_interfaces/EulerAngles:actionlib_msgs/GoalID:hiwonder_interfaces/MoveActionFeedback:geometry_msgs/Vector3:hiwonder_interfaces/Grasp:hiwonder_interfaces/GraspState:hiwonder_interfaces/MoveActionGoal:std_msgs/Header:hiwonder_interfaces/MoveGoal:hiwonder_interfaces/MoveActionResult:actionlib_msgs/GoalStatus"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg" "hiwonder_interfaces/MoveActionGoal:hiwonder_interfaces/Grasp:actionlib_msgs/GoalStatus:hiwonder_interfaces/GraspState:hiwonder_interfaces/MoveActionFeedback:hiwonder_interfaces/MoveFeedback:geometry_msgs/Vector3:hiwonder_interfaces/MoveGoal:geometry_msgs/Point:actionlib_msgs/GoalID:hiwonder_interfaces/MoveResult:std_msgs/Header:hiwonder_interfaces/EulerAngles:hiwonder_interfaces/MoveActionResult"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg" "geometry_msgs/Point:actionlib_msgs/GoalID:geometry_msgs/Vector3:hiwonder_interfaces/Grasp:std_msgs/Header:hiwonder_interfaces/MoveGoal"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg" "hiwonder_interfaces/Grasp:geometry_msgs/Vector3:hiwonder_interfaces/MoveGoal:geometry_msgs/Point:actionlib_msgs/GoalID:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg" "hiwonder_interfaces/MoveResult:hiwonder_interfaces/EulerAngles:actionlib_msgs/GoalID:hiwonder_interfaces/GraspState:std_msgs/Header:actionlib_msgs/GoalStatus"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg" "actionlib_msgs/GoalStatus:hiwonder_interfaces/GraspState:actionlib_msgs/GoalID:hiwonder_interfaces/MoveResult:std_msgs/Header:hiwonder_interfaces/EulerAngles"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg" "hiwonder_interfaces/MoveFeedback:actionlib_msgs/GoalID:actionlib_msgs/GoalStatus:std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg" "actionlib_msgs/GoalStatus:hiwonder_interfaces/MoveFeedback:actionlib_msgs/GoalID:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg" "geometry_msgs/Vector3:geometry_msgs/Point:hiwonder_interfaces/Grasp"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg" "geometry_msgs/Vector3:hiwonder_interfaces/Grasp:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg" "hiwonder_interfaces/EulerAngles:hiwonder_interfaces/GraspState"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg" "hiwonder_interfaces/GraspState:hiwonder_interfaces/EulerAngles"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg" NAME_WE)
@@ -204,12 +204,12 @@ add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv" "geometry_msgs/Pose:geometry_msgs/Point:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv" "geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv" "geometry_msgs/Pose:geometry_msgs/Point:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv" "geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetLink.srv" NAME_WE)
@@ -234,7 +234,7 @@ add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv" NAME_WE)
 add_custom_target(_hiwonder_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv" "geometry_msgs/Pose:geometry_msgs/Point:geometry_msgs/Quaternion"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "hiwonder_interfaces" "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv" "geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetTarget.srv" NAME_WE)
@@ -315,7 +315,7 @@ _generate_msg_cpp(hiwonder_interfaces
 _generate_msg_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_cpp(hiwonder_interfaces
@@ -411,37 +411,37 @@ _generate_msg_cpp(hiwonder_interfaces
 _generate_msg_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_cpp(hiwonder_interfaces
@@ -485,13 +485,13 @@ _generate_srv_cpp(hiwonder_interfaces
 _generate_srv_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_cpp(hiwonder_interfaces
@@ -521,7 +521,7 @@ _generate_srv_cpp(hiwonder_interfaces
 _generate_srv_cpp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_cpp(hiwonder_interfaces
@@ -716,7 +716,7 @@ _generate_msg_eus(hiwonder_interfaces
 _generate_msg_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_eus(hiwonder_interfaces
@@ -812,37 +812,37 @@ _generate_msg_eus(hiwonder_interfaces
 _generate_msg_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_eus(hiwonder_interfaces
@@ -886,13 +886,13 @@ _generate_srv_eus(hiwonder_interfaces
 _generate_srv_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_eus(hiwonder_interfaces
@@ -922,7 +922,7 @@ _generate_srv_eus(hiwonder_interfaces
 _generate_srv_eus(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_eus(hiwonder_interfaces
@@ -1117,7 +1117,7 @@ _generate_msg_lisp(hiwonder_interfaces
 _generate_msg_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_lisp(hiwonder_interfaces
@@ -1213,37 +1213,37 @@ _generate_msg_lisp(hiwonder_interfaces
 _generate_msg_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_lisp(hiwonder_interfaces
@@ -1287,13 +1287,13 @@ _generate_srv_lisp(hiwonder_interfaces
 _generate_srv_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_lisp(hiwonder_interfaces
@@ -1323,7 +1323,7 @@ _generate_srv_lisp(hiwonder_interfaces
 _generate_srv_lisp(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_lisp(hiwonder_interfaces
@@ -1518,7 +1518,7 @@ _generate_msg_nodejs(hiwonder_interfaces
 _generate_msg_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_nodejs(hiwonder_interfaces
@@ -1614,37 +1614,37 @@ _generate_msg_nodejs(hiwonder_interfaces
 _generate_msg_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_nodejs(hiwonder_interfaces
@@ -1688,13 +1688,13 @@ _generate_srv_nodejs(hiwonder_interfaces
 _generate_srv_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_nodejs(hiwonder_interfaces
@@ -1724,7 +1724,7 @@ _generate_srv_nodejs(hiwonder_interfaces
 _generate_srv_nodejs(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_nodejs(hiwonder_interfaces
@@ -1919,7 +1919,7 @@ _generate_msg_py(hiwonder_interfaces
 _generate_msg_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_py(hiwonder_interfaces
@@ -2015,37 +2015,37 @@ _generate_msg_py(hiwonder_interfaces
 _generate_msg_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalStatus.msg;/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg;/opt/ros/noetic/share/actionlib_msgs/cmake/../msg/GoalID.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg"
   "${MSG_I_FLAGS}"
-  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg"
+  "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg;/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_msg_py(hiwonder_interfaces
@@ -2089,13 +2089,13 @@ _generate_srv_py(hiwonder_interfaces
 _generate_srv_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_py(hiwonder_interfaces
@@ -2125,7 +2125,7 @@ _generate_srv_py(hiwonder_interfaces
 _generate_srv_py(hiwonder_interfaces
   "/home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/hiwonder_interfaces
 )
 _generate_srv_py(hiwonder_interfaces

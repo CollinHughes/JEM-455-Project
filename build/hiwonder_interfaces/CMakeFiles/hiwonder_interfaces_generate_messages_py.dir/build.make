@@ -156,8 +156,8 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_py: /home/u
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_ServoStateList.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_ServoStateList.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_ServoStateList.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_ServoStateList.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_ServoStateList.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoState.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Generating Python from MSG hiwonder_interfaces/ServoStateList"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/ServoStateList.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg
 
@@ -249,50 +249,50 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_py: /home/u
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveAction.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Generating Python from MSG hiwonder_interfaces/MoveAction"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveAction.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionGoal.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Generating Python from MSG hiwonder_interfaces/MoveActionGoal"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionGoal.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionResult.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Generating Python from MSG hiwonder_interfaces/MoveActionResult"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionResult.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionFeedback.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionFeedback.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionFeedback.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionFeedback.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveFeedback.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionFeedback.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalID.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionFeedback.py: /opt/ros/noetic/share/actionlib_msgs/msg/GoalStatus.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveActionFeedback.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Generating Python from MSG hiwonder_interfaces/MoveActionFeedback"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveActionFeedback.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg
@@ -300,15 +300,15 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_py: /home/u
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveGoal.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveGoal.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveGoal.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveGoal.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveGoal.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/Grasp.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveGoal.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Generating Python from MSG hiwonder_interfaces/MoveGoal"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveResult.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveResult.py: /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveResult.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveResult.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/GraspState.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg/_MoveResult.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg/EulerAngles.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Generating Python from MSG hiwonder_interfaces/MoveResult"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveResult.msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/msg
 
@@ -344,16 +344,16 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_py: /home/u
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_GetRobotPose.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_GetRobotPose.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_GetRobotPose.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_GetRobotPose.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_GetRobotPose.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_GetRobotPose.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Generating Python code from SRV hiwonder_interfaces/GetRobotPose"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/GetRobotPose.srv -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointsValue.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointsValue.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointsValue.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointsValue.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointsValue.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointsValue.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Generating Python code from SRV hiwonder_interfaces/SetJointsValue"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv
@@ -384,8 +384,8 @@ hiwonder_interfaces/CMakeFiles/hiwonder_interfaces_generate_messages_py: /home/u
 
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointValue.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointValue.py: /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointValue.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointValue.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointValue.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv/_SetJointValue.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Generating Python code from SRV hiwonder_interfaces/SetJointValue"
 	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointValue.srv -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/src/hiwonder_interfaces/msg -Ihiwonder_interfaces:/home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Iactionlib_msgs:/opt/ros/noetic/share/actionlib_msgs/cmake/../msg -p hiwonder_interfaces -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/hiwonder_interfaces/srv

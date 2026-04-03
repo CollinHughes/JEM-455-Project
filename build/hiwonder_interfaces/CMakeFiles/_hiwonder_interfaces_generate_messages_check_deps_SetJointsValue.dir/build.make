@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
 include hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_SetJointsValue.dir/progress.make
 
 hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_SetJointsValue:
-	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py hiwonder_interfaces /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv geometry_msgs/Pose:geometry_msgs/Point:geometry_msgs/Quaternion
+	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py hiwonder_interfaces /home/ubuntu/catkin_ws/src/hiwonder_interfaces/srv/SetJointsValue.srv geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion
 
 _hiwonder_interfaces_generate_messages_check_deps_SetJointsValue: hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_SetJointsValue
 _hiwonder_interfaces_generate_messages_check_deps_SetJointsValue: hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_SetJointsValue.dir/build.make

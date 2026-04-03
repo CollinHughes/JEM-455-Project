@@ -207,6 +207,14 @@
 /home/ubuntu/catkin_ws/build/jetarm_fk/CMakeFiles/test.dir
 /home/ubuntu/catkin_ws/build/jetarm_fk/CMakeFiles/list_install_components.dir
 /home/ubuntu/catkin_ws/build/jetarm_fk/CMakeFiles/jetarm_fk.dir
+/home/ubuntu/catkin_ws/build/jetarm_ik/CMakeFiles/install/strip.dir
+/home/ubuntu/catkin_ws/build/jetarm_ik/CMakeFiles/list_install_components.dir
+/home/ubuntu/catkin_ws/build/jetarm_ik/CMakeFiles/edit_cache.dir
+/home/ubuntu/catkin_ws/build/jetarm_ik/CMakeFiles/install.dir
+/home/ubuntu/catkin_ws/build/jetarm_ik/CMakeFiles/test.dir
+/home/ubuntu/catkin_ws/build/jetarm_ik/CMakeFiles/install/local.dir
+/home/ubuntu/catkin_ws/build/jetarm_ik/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/catkin_ws/build/jetarm_ik/CMakeFiles/jetarm_ik.dir
 /home/ubuntu/catkin_ws/build/ros-keyboard-master/CMakeFiles/install/strip.dir
 /home/ubuntu/catkin_ws/build/ros-keyboard-master/CMakeFiles/install/local.dir
 /home/ubuntu/catkin_ws/build/ros-keyboard-master/CMakeFiles/install.dir

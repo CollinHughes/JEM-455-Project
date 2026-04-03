@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
 include hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_MoveGoal.dir/progress.make
 
 hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_MoveGoal:
-	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py hiwonder_interfaces /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg geometry_msgs/Vector3:geometry_msgs/Point:hiwonder_interfaces/Grasp
+	cd /home/ubuntu/catkin_ws/build/hiwonder_interfaces && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py hiwonder_interfaces /home/ubuntu/catkin_ws/devel/share/hiwonder_interfaces/msg/MoveGoal.msg geometry_msgs/Vector3:hiwonder_interfaces/Grasp:geometry_msgs/Point
 
 _hiwonder_interfaces_generate_messages_check_deps_MoveGoal: hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_MoveGoal
 _hiwonder_interfaces_generate_messages_check_deps_MoveGoal: hiwonder_interfaces/CMakeFiles/_hiwonder_interfaces_generate_messages_check_deps_MoveGoal.dir/build.make
